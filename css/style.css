@@ -5,12 +5,18 @@
     font-family: sans-serif;
 }
 
+body {
+    height: 100vh;
+}
+
+
 .banner {
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(../img/pexels-christopher-moon-7649503.jpg);
     background-size: cover;
     background-position: center;
+    position: relative;
 }
 
 .navbar {
@@ -54,4 +60,70 @@
     left: 0%;
     bottom: -10px;
     position: absolute;
+    transition: 0.5s;
 }
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+
+
+.content {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.content h1 {
+    font-size: 70px;
+    margin-top:  80px;
+}
+
+.content p {
+    width: 45%;
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;          /*Altura - distância entre as linhas*/
+}
+
+.content button {
+    width: 200px;
+    padding: 15px 0px;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    cursor: pointer;
+    color: #fff;
+    overflow: hidden;
+    position: relative;                     /**/
+}
+
+span {
+    background: #009688;
+    width: 0%;
+    height: 100%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: -1;                /*faz com o span fique por baixo do button*/
+    transition: 0.5s;                           
+}
+
+
+.content button:hover span{             /*aplica HOVER no button e CHAMA o SPAN também*/
+    width: 100%;    
+}
+
+.content button:hover {
+    border: none;                       /*Esconde a borda no HOVER*/
+}
+
+
