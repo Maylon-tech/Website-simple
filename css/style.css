@@ -1,14 +1,82 @@
 
 * {
-    margin: 0px;
-    padding: 0px;
-    font-family: sans-serif;
+    margin: none;
+    padding: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    height: 100%;
+    background-color: orange;
+}
+.container {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 2rem;
+    overflow: hidden;
 }
 
-.banner {
+.header {
+    height: 10vh;
     width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(../img/pexels-christopher-moon-7649503.jpg);
-    background-size: cover;
-    background-position: center;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 3rem;
+    background-color: blueviolet;
+}
+.header .logo {
+    background-color: chartreuse;
+    flex: 2;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.header nav {
+    display: flex;
+    background-color: bisque;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 2;
+}
+.header .menu {
+    display: flex;
+    gap: 1rem;
+}
+
+
+
+main {
+    height: 88vh;
+    background-color: blue;
+}
+.contents {
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+}
+main .content-info {
+    border: 2px solid orange;
+    display: grid;
+    place-items: center;
+}
+main .content-image {
+    border: 2px solid orangered;
+    display: grid;
+    place-items: center;
+}
+
+
+.footer {
+    height: 50px;
+    background-color: brown;
+    color: #fff;
+    font-size: 1.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
